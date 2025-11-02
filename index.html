@@ -16,6 +16,31 @@
         <link rel="stylesheet" href="css/leaflet.photon.css">
         <link rel="stylesheet" href="css/leaflet-measure.css">
         <style>
+/* Aturan untuk Header Kustom */
+#custom-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 65px; /* Ketinggian header */
+    background-color: #1f3f6e; /* Warna biru tua */
+    color: white;
+    z-index: 10000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+
+    /* Menggunakan Flexbox untuk penataan item */
+    display: flex;
+    align-items: center; /* Pusatkan item secara vertikal */
+    padding: 0 15px;
+}
+
+/* Aturan untuk Logo */
+#header-logo {
+    height: 50px; /* Tinggi logo */
+    width: auto;
+    margin-right: 15px; /* Jarak antara logo dan judul */
+}
+
         html, body, #map {
             width: 100%;
             height: 100%;
@@ -26,6 +51,13 @@
         <title>SIGAP KUMUH (Sistem Informasi Geografis Aksi Penanganan Kumuh) Kabupaten Lamongan</title>
     </head>
     <body>
+        <div id="custom-header">
+        <img id="header-logo" src="C:\Users\Nana\OneDrive\DPRKPCK Lamongan\Bidang Perkim\3. WebGIS\SIGAPKUMUH\images\Lambang_Kabupaten_Lamongan.png" alt="Lambang Kabupaten Lamongan">
+        <div id="header-title">
+        <h1>SIGAP KUMUH</h1>
+        <p>Sistem Informasi Geografis Aksi Penanganan Kumuh di Kabupaten Lamongan</p>
+        </div>
+        </div>
         <div id="map">
         </div>
         <script src="js/qgis2web_expressions.js"></script>
