@@ -41,6 +41,24 @@
     margin-right: 15px; /* Jarak antara logo dan judul */
 }
 
+/* Aturan untuk Judul */
+#header-title h1 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#header-title p {
+    margin: 0;
+    font-size: 12px;
+}
+
+/* Menggeser Peta ke Bawah agar tidak tertutup Header */
+#map {
+    top: 65px !important; /* Geser peta ke bawah sebesar tinggi header */
+    height: calc(100% - 65px) !important; /* Sesuaikan tinggi peta */
+}
+
         html, body, #map {
             width: 100%;
             height: 100%;
