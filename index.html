@@ -21,7 +21,9 @@
             padding: 0;
             margin: 0;
         }
-        </style>
+        
+  .leaflet-top { margin-top: 8px; }
+</style>
         <title></title>
     
 <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -34,7 +36,7 @@
   /* Use Plus Jakarta Sans */
   body {
     font-family: "Plus Jakarta Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-    padding-top: var(--header-h); /* ensure map isn't overlapped by fixed header */
+    padding-top: calc(var(--header-h) + 10px); /* ensure map isn't overlapped by fixed header */
   }
   /* Fixed blue header */
   .sigap-header{
@@ -107,6 +109,8 @@
     cursor: pointer;
   }
   .btn-ok:active{ transform: translateY(1px); }
+
+  .leaflet-top { margin-top: 8px; }
 </style>
 
 </head>
@@ -1488,6 +1492,15 @@
       if(!seen){ openModal(); }
     });
   })();
+</script>
+
+
+<script>
+  try {
+    if (typeof map !== 'undefined' && map.zoomControl) {
+      map.zoomControl.setPosition('bottomright');
+    }
+  } catch (e) {}
 </script>
 
 </body>
